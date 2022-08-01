@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+
+</html>
+<script>
+    class Caculator {
+        constructor(num1, num2, cl) {
+            this.number1 = num1;
+            this.number2 = num2;
+            this.color = cl;
+        }
+        getnumber1() {
+            return this.number1;
+        }
+        getnumber2() {
+            return this.number2;
+        }
+
+        Add() {
+            return this.number1 + this.number2;
+        }
+        Sub() {
+            return this.number1 - this.number2;
+        }
+        Nhan() {
+            return this.number1 * this.number2;
+        }
+        Dive() {
+            return this.number1 / this.number2;
+        }
+    };
+    let casio = new Caculator(10,20,"red");
+    
+    document.write(casio.Add());
+</script>

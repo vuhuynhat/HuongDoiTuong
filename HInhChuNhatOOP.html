@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="700" style="border:1px solid #c3c3c3;"></canvas>
+</body>
+</html>
+<script>
+    class rectangle{
+        constructor(chieudai,chieurong){
+            this.chieudai=chieudai;
+            this.chieurong=chieurong;
+        }
+        getChieudai(){
+            return this.chieudai;
+        }
+        getChieurong(){
+            return this.chieurong;
+        }
+        
+
+        getChuvi(chieudai,chieurong){
+            return (this.chieudai + this.chieurong)*2;
+        }
+        getDienTich(chieudai,chieurong){
+            return this.chieudai*this.chieurong;
+        }
+    }
+    let rectangle1 = new rectangle(200,100);
+    document.write("<br>"+"Chu vi la "+rectangle1.getChuvi()+"<br>"+" Dien tich la "+ rectangle1.getDienTich()+"<br>");
+    let canvas= document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(100,250,rectangle1.getChieudai(),rectangle1.getChieurong());
+    ctx.stroke();
+</script>
